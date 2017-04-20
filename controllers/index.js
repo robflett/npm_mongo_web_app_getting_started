@@ -6,7 +6,7 @@ router.use("/api/planets", require("./planets_router.js"))
 
 router.get("/", function(req,res){
   // SEND INDEX.HTML FROM HERE
-  res.json({data: "Hello from my API"})
+  res.sendFile(path.join(__dirname + "/../client/index.html"))
 })
 
 module.exports = router
